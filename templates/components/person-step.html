@@ -1,0 +1,24 @@
+<section id="person-step" class="person-step">
+  <div class="card">
+    <div class="shared-preview">
+      <button class="preview" id="preview1" type="button" aria-label="인물 사진 업로드 또는 변경"><span class="empty-icon" aria-hidden="true">＋</span><span class="placeholder">새로운 장면의 주인공이 될 사진</span></button>
+      <video id="camera-video" autoplay muted playsinline aria-label="웹캠 실시간 화면" hidden></video>
+      <span id="camera-badge" class="camera-badge" hidden>LIVE · 웹캠</span>
+      <section id="camera-panel" class="camera-panel" aria-label="웹캠 촬영" hidden>
+        <p id="camera-status" role="status" aria-live="polite"></p>
+      </section>
+    </div>
+    <p class="file-name" id="name1">선택된 사진이 없습니다</p>
+    <input class="sr-only" id="image1" type="file" accept=".png,.jpg,.jpeg,.webp,.bmp,.gif" aria-label="인물 사진 선택" tabindex="-1">
+    <div class="button-pair">
+      <button class="choose" id="choose1" type="button">인물 사진 선택</button>
+      <button class="choose" id="open-camera" type="button" aria-expanded="false" aria-controls="camera-panel">웹캠 화면 열기</button>
+    </div>
+    <p id="camera-error" class="camera-error" role="alert" hidden></p>
+    <div class="cancel-photo-slot">
+      <button class="cancel-photo" id="cancel-photo" type="button" hidden>사진 선택 취소</button>
+    </div>
+    <p class="note">얼굴과 몸이 선명하게 보이는 사진을 추천해요.<br>PNG, JPG, WEBP, BMP, GIF · 최대 25MB</p>
+  </div>
+  <div class="actions"><button class="primary" id="next" type="button" disabled>다음 · 배경 고르기 →</button></div>
+</section>

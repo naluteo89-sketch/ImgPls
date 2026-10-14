@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>내 사진 받기 · 이미지 스튜디오</title>
+  <link rel="stylesheet" href="/static/css/styles.css?v=footer-5">
+</head>
+<body>
+  {% include 'components/header.html' %}
+  <main class="shared-photo">
+    <div class="eyebrow">YOUR NEW SCENE</div>
+    <h1>당신의 사진이 도착했어요.</h1>
+    <p class="intro">사진을 다운로드해서 간직해 보세요.</p>
+    <img class="shared-result" src="/results/{{ filename }}" alt="완성된 나의 사진">
+    <a class="download" href="/share/{{ filename }}/download" download>사진 다운로드 ↓</a>
+    <p class="note">모바일에서는 사진을 길게 눌러 저장할 수도 있어요.</p>
+  </main>
+  {% include 'components/footer.html' %}
+</body>
+</html>

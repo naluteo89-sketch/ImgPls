@@ -1,0 +1,13 @@
+<section id="theme-step" hidden>
+  <div class="person-summary"><img id="person-thumb" alt="선택한 인물 사진"><span>사진이 준비되었어요.<br><small>이제 새로운 장면을 골라 주세요.</small></span><div class="button-pair summary-buttons"><button class="choose" id="back" type="button">사진 변경</button><button class="cancel-photo" id="cancel-photo-theme" type="button">선택 취소</button></div></div>
+  <fieldset class="theme-fieldset"><legend class="sr-only">배경 테마 선택</legend><div class="theme-grid">
+  {% for id, theme in themes.items() %}
+    <label class="theme-card">
+      <input type="radio" name="theme" value="{{ id }}">
+      <img src="/themes/{{ id }}" alt="{{ theme.title }} 배경" loading="lazy">
+      <span class="theme-copy"><strong>{{ theme.title }}</strong><small>{{ theme.description }}</small><span class="selection-mark" aria-hidden="true">✓</span></span>
+    </label>
+  {% endfor %}
+  </div></fieldset>
+  <div class="actions"><span class="note" id="theme-note">마음에 드는 배경을 하나 선택해 주세요.</span><button class="primary" id="submit" disabled>이 배경으로 만들기 ↗</button></div>
+</section>

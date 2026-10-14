@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이미지 스튜디오</title>
+  <link rel="stylesheet" href="/static/css/styles.css?v=camera-overlay-8">
+  <script src="/static/js/app.js?v=camera-overlay-8" defer></script>
+</head>
+<body>
+  {% include 'components/header.html' %}
+  <main>
+    {% include 'components/intro.html' %}
+    {% include 'components/upload-form.html' %}
+    {% include 'components/status.html' %}
+    {% include 'components/result.html' %}
+  </main>
+  {% with hide_home_button=true %}
+    {% include 'components/footer.html' %}
+  {% endwith %}
+</body>
+</html>
